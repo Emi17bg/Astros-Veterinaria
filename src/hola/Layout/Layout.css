@@ -1,0 +1,89 @@
+.hero_area {
+    min-height: 98vh !important; 
+    position: relative;
+}
+
+.hero_area::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 15px;
+    background-color: #023b48;
+}
+
+.sub_page .hero_area {
+    height: auto !important;
+}
+
+.header_section {
+    background-color: #f6f8f7 !important;
+    padding-top: 15px;
+}
+
+.header_section .container-fluid {
+    padding: 0 25px;
+}
+
+.header_section .quote_btn-container a {
+    color: #434242 !important;
+    text-transform: uppercase;
+}
+
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 10px 30px !important;
+    color: #434242 !important;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: inherit !important;
+}
+
+.btn,
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.navbar-brand img {
+    width: 30px;
+    margin-right: 5px;
+}
+
+.navbar-brand span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #191919;
+    margin-top: 5px;
+}
+
+.custom_nav-container {
+    z-index: 99999;
+    padding: 5px 0;
+}
+
+.custom_nav-container .navbar-toggler {
+    outline: none;
+    border: none;
+    background: none;
+    width: 40px;
+    height: 40px;
+}
+
+.custom_nav-container .navbar-toggler .navbar-toggler-icon {
+    display: none; 
+}

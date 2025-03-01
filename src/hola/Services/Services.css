@@ -1,0 +1,47 @@
+.service_section .row {
+  display: flex; /* Alinea los círculos horizontalmente */
+  justify-content: space-evenly; /* Asegura una separación uniforme entre los círculos */
+  align-items: center;
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  padding: 0 5px; /* Margen reducido en los extremos */
+}
+
+.service_section .col-md-3 {
+  flex: 0 0 22%; /* Aumenta el ancho de cada columna */
+  max-width: 22%; /* Adapta el tamaño máximo */
+  margin: 0 10px; /* Mantén un poco de espacio entre los elementos */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service_section .img_box {
+  width: 200px; /* Incrementa el tamaño del círculo */
+  height: 200px;
+  border-radius: 50%; /* Mantén la forma circular */
+  background-color: #18d3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service_section .img_box img {
+  width: 100%; /* Asegura que la imagen ocupe todo el círculo */
+  height: 100%; /* Escala proporcional dentro del contenedor */
+  border-radius: 50%; /* Hace que la imagen también sea circular */
+}
+
+.service_section .detail_box {
+  margin-top: 20px; /* Espacio entre el círculo y el texto */
+}
+
+.service_section .detail_box h6 {
+  font-weight: bold;
+  font-size: 18px; /* Tamaño del texto ligeramente aumentado */
+}
+
+.service_section .detail_box p {
+  font-size: 14px;
+  color: #555;
+}
