@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Carrousel.css';
-import CarrouselVet from '../../assets/CarrouselVet.png';
+import CarrouselVet from '../../assets/Carrousel/CarrouselVet.png';
 
 const SliderSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);

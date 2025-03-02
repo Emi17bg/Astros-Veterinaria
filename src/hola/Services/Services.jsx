@@ -1,44 +1,42 @@
 import React from "react";
 import './Services.css';
-import petCareImg from "../../assets/AboutUs.png";
-import petHotelImg from "../../assets/AboutUs.png";
-import emergencyImg from "../../assets/AboutUs.png";
+import 'boxicons';
 
 const ServicesSection = () => {
   return (
     <section className="service_section layout_padding">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-8 offset-md-2">
+          <div className="col-md-10 offset-md-1">
             <h2 className="custom_heading">
-              Our <span>Services</span>
+              Servicios
             </h2>
             <div className="container layout_padding2">
               <div className="row justify-content-center">
                 <ServiceCard 
-                  image={petCareImg} 
-                  title="Pet Care" 
-                  text="We provide top-notch care for your beloved pets, ensuring their health and happiness."
+                  icon="bx-plus-medical" 
+                  title="Atención médica general" 
+                  text="Chequeos de salud y tratamiento de enfermedades."
                 />
                 <ServiceCard 
-                  image={petHotelImg} 
-                  title="Pet Hotel" 
-                  text="A luxurious and comfortable stay for your pets while you are away."
+                  icon="bx-pulse" 
+                  title="Cirugía veterinaria" 
+                  text="Esterilizaciones, castraciones, extracción de tumores y cirugías de emergencia."
                 />
                 <ServiceCard 
-                  image={emergencyImg} 
-                  title="Emergency" 
-                  text="24/7 emergency services to take care of your pet in critical situations."
+                  icon="bx-first-aid" 
+                  title="Diagnóstico por imágenes" 
+                  text="Radiografías, ecografías y análisis de laboratorio."
                 />
                 <ServiceCard 
-                  image={emergencyImg} 
-                  title="Emergency" 
-                  text="24/7 emergency services to take care of your pet in critical situations."
+                  icon="bx-shower" 
+                  title="Peluquería y estética" 
+                  text="Baños, cortes de pelo, limpieza de oídos y cuidado de uñas para el bienestar de las mascotas."
                 />
                 <ServiceCard 
-                  image={emergencyImg} 
-                  title="Emergency" 
-                  text="24/7 emergency services to take care of your pet in critical situations."
+                  icon="bx-home-heart" 
+                  title="Hotel canino" 
+                  text="Servicio de hospedaje cómodo y seguro, con atención y cuidado personalizado."
                 />
               </div>
             </div>
@@ -49,11 +47,11 @@ const ServicesSection = () => {
   );
 };
 
-const ServiceCard = ({ image, title, text }) => {
+const ServiceCard = ({ icon, title, text }) => {
   return (
     <div className="col-md-3">
       <div className="img_box">
-        <img src={image} alt={title} />
+        <i className={`bx ${icon}`}></i> 
       </div>
       <div className="detail_box">
         <h6>{title}</h6>

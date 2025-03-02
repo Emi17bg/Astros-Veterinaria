@@ -1,47 +1,62 @@
+.service_section {
+  margin: 0;
+  padding: 0;
+}
+
+.service_section .custom_heading {
+  text-align: left;
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333; 
+  margin-bottom: 20px;
+}
+
 .service_section .row {
-  display: flex; /* Alinea los círculos horizontalmente */
-  justify-content: space-evenly; /* Asegura una separación uniforme entre los círculos */
-  align-items: center;
-  width: 100%; /* Ocupa todo el ancho de la pantalla */
-  padding: 0 5px; /* Margen reducido en los extremos */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: flex-start; 
+  width: 100%;
+  margin: 0 auto; 
+  padding: 0 20px; 
 }
 
 .service_section .col-md-3 {
-  flex: 0 0 22%; /* Aumenta el ancho de cada columna */
-  max-width: 22%; /* Adapta el tamaño máximo */
-  margin: 0 10px; /* Mantén un poco de espacio entre los elementos */
+  flex: 0 1 18%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+  margin: 0 10px; 
 }
 
 .service_section .img_box {
-  width: 200px; /* Incrementa el tamaño del círculo */
-  height: 200px;
-  border-radius: 50%; /* Mantén la forma circular */
-  background-color: #18d3ff;
+  width: 150px; 
+  height: 150px;
+  border-radius: 50%; 
+  background-color: #81ad45; 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 10px; 
 }
 
-.service_section .img_box img {
-  width: 100%; /* Asegura que la imagen ocupe todo el círculo */
-  height: 100%; /* Escala proporcional dentro del contenedor */
-  border-radius: 50%; /* Hace que la imagen también sea circular */
+.service_section .img_box i {
+  font-size: 50px; 
+  color: white; 
 }
 
 .service_section .detail_box {
-  margin-top: 20px; /* Espacio entre el círculo y el texto */
+  margin-top: 10px;
 }
 
 .service_section .detail_box h6 {
   font-weight: bold;
-  font-size: 18px; /* Tamaño del texto ligeramente aumentado */
+  font-size: 16px; 
+  margin-bottom: 5px; 
 }
 
 .service_section .detail_box p {
   font-size: 14px;
-  color: #555;
+  color: #555; 
 }

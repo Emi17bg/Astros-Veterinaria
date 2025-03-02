@@ -1,19 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Adoptions from "../pages/Adoptions";
-import Contact from "../Pages/Contact";
+import Contact from "../pages/Contact";
 
-
-function App() {
+function AppRouter() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route path="/api-data" element={<Adoptions />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </Router>
   );
 }
 
-export default Router;
+export default AppRouter;
