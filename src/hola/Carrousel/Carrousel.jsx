@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './Carrousel.css';
-import CarrouselVet from '../../assets/Carrousel/CarrouselVet.png';
+import Care from '../../assets/Carrousel/Cuidado.png';
+import Emergency from '../../assets/Carrousel/Emergencia.png';
+import Adoptions from '../../assets/Carrousel/Adopcion.png';
+import Test from '../../assets/Carrousel/Family.png';
 
 const SliderSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -17,22 +20,22 @@ const SliderSection = () => {
     {
       title: 'Cuidado Médico de Calidad para tu Mascota',
       description: 'Ofrecemos servicios veterinarios completos, desde chequeos rutinarios hasta cirugías avanzadas. ¡Tu mascota está en buenas manos!',
-      imgSrc: CarrouselVet,
+      imgSrc: Care,
     },
     {
       title: 'Emergencias 24/7',
       description: 'Estamos disponibles las 24 horas del día, los 7 días de la semana, para cualquier emergencia que pueda surgir. ¡Tu mascota siempre tendrá atención inmediata!',
-      imgSrc: CarrouselVet,
+      imgSrc: Emergency,
     },
     {
       title: 'Adopta y Cambia una Vida',
       description: 'Descubre a nuestros adorables amigos que buscan un hogar. ¡Ven y encuentra a tu nuevo mejor amigo hoy mismo!',
-      imgSrc: CarrouselVet,
+      imgSrc: Adoptions,
     },
     {
       title: 'Historias Felices',
       description: 'Lee las experiencias de nuestros clientes satisfechos y sus mascotas felices. ¡Tu testimonio podría ser el próximo!',
-      imgSrc: CarrouselVet,
+      imgSrc: Test,
     },
   ];
 

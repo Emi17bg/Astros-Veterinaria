@@ -4,12 +4,10 @@
 }
 
 .service_section .custom_heading {
-  text-align: left;
-  margin-left: 20px;
-  font-size: 30px;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
   font-weight: bold;
-  color: #333; 
-  margin-bottom: 20px;
 }
 
 .service_section .row {

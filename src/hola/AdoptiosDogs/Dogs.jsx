@@ -1,34 +1,43 @@
 import { useEffect, useState } from "react";
+import './Dogs.css';
 
 const DogGallery = () => {
   const [dogs, setDogs] = useState([]);
   const API_URL = "https://api.thedogapi.com/v1/images/search?limit=10";
+
+  const names = ["Max", "Bella", "Rocky", "Luna", "Charlie", "Duke", "Molly", "Zeus", "Daisy", "Bruno"]; //No encontre una API que tenga toda la informacion que queria 
 
   useEffect(() => {
     const fetchDogs = async () => {
       try {
         const response = await fetch(API_URL);
         const data = await response.json();
-        setDogs(data);
+
+        const dogsWithNames = data.map((dog, index) => ({
+          id: dog.id,
+          url: dog.url,
+          name: names[index % names.length], 
+        }));
+
+        setDogs(dogsWithNames);
       } catch (error) {
         console.error("Error al obtener las imágenes de perros:", error);
       }
     };
-    
+
     fetchDogs();
   }, []);
 
   return (
-    <div className="p-5">
-      <h1 className="text-2xl font-bold mb-4">Perros en adopcion responsable</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {dogs.map(({ id, url }) => (
-          <div key={id} className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center justify-between min-h-[300px]">
-            <img 
-              src={url} 
-              alt="Perro lindo" 
-              className="w-full h-48 object-cover aspect-square rounded-lg"
-            />
+    <div className="gallery-container">
+      <h1 className="gallery-title">Mascotas en adopción responsable</h1>
+      <div className="row justify-content-center">
+        {dogs.map(({ id, url, name }) => (
+          <div key={id} className="card col-2 m-2">
+            <img className="card-img-top" src={url} alt={name}></img>
+            <div className="card-body">
+              <h5 className="card-title">{name}</h5>
+            </div>
           </div>
         ))}
       </div>
@@ -37,3 +46,4 @@ const DogGallery = () => {
 };
 
 export default DogGallery;
+

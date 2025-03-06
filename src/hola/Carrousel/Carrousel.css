@@ -1,79 +1,55 @@
 .slider_section {
-  background-image: url(../../assets/Carrousel/CarrouselDog.png);
-  height: 90vh;
-  padding: 6% 0;
+  height: 90vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background-image: url(../../assets/Carrousel/CarrouselDog.png); 
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .slider_section .row {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: flex;
+  align-items: center; 
+  width: 100%;
+  padding: 0 5%; 
 }
 
 .slider_detail-box {
-  margin-top: -20%; 
+  flex: 1; 
+  text-align: left; 
 }
 
 .slider_detail-box h1 {
-  color: #ffffff;
-  margin-top: -10%;
-  font-size: 52px;
-}
-
-.slider_detail-box h1 span {
-  display: inline-block;
-  color: #434242;
-  font-weight: bold;
+  color: #000; 
+  font-size: 2.5rem; 
+  margin-bottom: 20px;
 }
 
 .slider_detail-box p {
-  color: #f6f8f7;
-  margin-top: 20px;
+  color: white; 
+  font-size: 1.2rem;
   margin-bottom: 20px;
-  font-size: 20px;
-}
-
-.slider_detail-box .btn-box .btn-1 {
-  display: inline-block;
-  padding: 10px 45px;
-  background-color: #023b48;
-  border: 1px solid #023b48;
-  color: #ffffff;
-  margin-right: 10px;
-}
-
-.slider_detail-box .btn-box .btn-1:hover {
-  background-color: transparent;
-  color: #023b48;
-}
-
-.slider_detail-box .btn-box .btn-2 {
-  display: inline-block;
-  padding: 10px 45px;
-  background-color: #ffffff;
-  border: 1px solid #ffffff;
-  color: #023b48;
-}
-
-.slider_detail-box .btn-box .btn-2:hover {
-  background-color: transparent;
-  color: #ffffff;
 }
 
 .slider_img-box {
-  margin-right: 5%;
-  margin-top: -1%;
+  flex: 2; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
 }
 
 .slider_img-box img {
-  width: 90%;
+  width: 200%; 
+  height: auto;
+  max-height: 90vh; 
+  object-fit: contain;
+  transform: translateX(-20%); 
 }
 
 .carousel-indicators {
-  bottom: -15%;
-  color: transparent
+  bottom: -15%; 
+  color: transparent;
 }
 
 .carousel-indicators li {
@@ -81,7 +57,7 @@
   height: 20px;
   border-radius: 50%; 
   background-color: #ccc; 
-  opacity: 1; 
+  opacity: 1;
 }
 
 .carousel-indicators .active {
@@ -89,5 +65,5 @@
 }
 
 .carousel-indicators li::before {
-  content: none; 
+  content: none;
 }
