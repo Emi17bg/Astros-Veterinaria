@@ -41,14 +41,13 @@ const SliderSection = () => {
 
   return (
     <section className="slider_section position-relative">
-      <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+      <div id="carouselExampleIndicators" className="carousel slide">
         <ol className="carousel-indicators">
           {slides.map((_, index) => (
             <li
               key={index}
-              data-target="#carouselExampleIndicators"
-              data-slide-to={index}
               className={activeIndex === index ? 'active' : ''}
+              onClick={() => setActiveIndex(index)}
             ></li>
           ))}
         </ol>
@@ -58,15 +57,13 @@ const SliderSection = () => {
             <div key={index} className={`carousel-item ${activeIndex === index ? 'active' : ''}`}>
               <div className="container-fluid">
                 <div className="row">
-                  <div className="col-md-4 offset-md-2">
+                  <div className="col-12 col-md-6 col-lg-4 offset-lg-2">
                     <div className="slider_detail-box">
-                      <h1 style={{ color: 'black' }}>
-                        {slide.title}
-                      </h1>
+                      <h1>{slide.title}</h1>
                       <p>{slide.description}</p>
                     </div>
                   </div>
-                  <div className="col-md-6">
+                  <div className="col-12 col-md-6 col-lg-6 d-none d-md-block">
                     <div className="slider_img-box">
                       <img src={slide.imgSrc} alt="Slider" />
                     </div>
@@ -77,22 +74,10 @@ const SliderSection = () => {
           ))}
         </div>
 
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-target="#carouselExampleIndicators"
-          data-slide="prev"
-          onClick={handlePrev}
-        >
+        <button className="carousel-control-prev" onClick={handlePrev}>
           <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-target="#carouselExampleIndicators"
-          data-slide="next"
-          onClick={handleNext}
-        >
+        <button className="carousel-control-next" onClick={handleNext}>
           <span className="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
       </div>
@@ -101,3 +86,5 @@ const SliderSection = () => {
 };
 
 export default SliderSection;
+
+

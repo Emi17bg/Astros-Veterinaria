@@ -1,5 +1,6 @@
 .profesionales_section {
-  padding: 50px 0;
+  margin: 0;
+  padding: 0;
 }
 
 .profesionales_section .custom_heading {
@@ -9,34 +10,37 @@
   font-weight: bold;
 }
 
-/* Contenedor de las tarjetas (Dentro de la sección de profesionales) */
 .profesionales_section .profesionales_row {
   display: flex;
-  justify-content: space-between; /* Espacio entre las tarjetas */
-  flex-wrap: nowrap; /* Evita que las tarjetas se rompan a una nueva línea */
-  gap: 15px; /* Espacio entre tarjetas */
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; 
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Estilos de cada tarjeta dentro de la sección de profesionales */
+
 .profesionales_section .profesionales_card {
-  flex: 1; /* Hace que las tarjetas tengan el mismo tamaño */
-  max-width: calc(100% / 5 - 20px); /* Divide el espacio disponible entre las 5 tarjetas */
+  flex: 0 1 18%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 10px;
   background: white;
   border-radius: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   padding: 20px;
   transition: transform 0.3s ease-in-out;
-  border-top: 7px solid #81ad45; /* Línea superior en tono verde */
-  margin-bottom: 20px; /* Añadir espacio inferior para separar las filas */
+  border-top: 7px solid #81ad45;
+  margin-bottom: 20px;
 }
 
-/* Efecto hover para las tarjetas dentro de la sección de profesionales */
 .profesionales_section .profesionales_card:hover {
-  transform: translateY(-5px); /* Eleva ligeramente la tarjeta */
+  transform: translateY(-5px);
 }
 
-/* Contenedor de la imagen dentro de la tarjeta */
 .profesionales_section .profesionales_img_box {
   width: 100%;
   display: flex;
@@ -45,10 +49,10 @@
   margin-bottom: 15px;
 }
 
-/* Imagen dentro de la tarjeta */
 .profesionales_section .service_image {
-  width: 250px; /* Tamaño fijo */
-  height: 250px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   object-fit: cover;
 }
 
@@ -56,20 +60,31 @@
   text-align: center;
 }
 
-/* Nombre del profesional dentro de la tarjeta */
 .profesionales_section .detail_box h6 {
-  font-size: 1.2rem;
+  font-size: 16px;
   font-weight: bold;
   color: #333;
   margin-bottom: 10px;
 }
 
-/* Descripción del profesional dentro de la tarjeta */
 .profesionales_section .detail_box p {
-  font-size: 0.9rem;
+  font-size: 14px;
   color: #555;
   line-height: 1.4;
 }
+
+@media (max-width: 768px) {
+  .profesionales_section .profesionales_card {
+    flex: 0 1 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profesionales_section .profesionales_card {
+    flex: 0 1 100%;
+  }
+}
+
 
 
   

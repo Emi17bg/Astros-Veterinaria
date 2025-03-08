@@ -3,10 +3,9 @@ import DogGallery from "../hola/AdoptiosDogs/Dogs";
 
 const Adoptions = () => {
   return (
-    <>
-      <Layout />
+    <Layout>
       <DogGallery />
-    </>
+    </Layout>
   );
 };
 

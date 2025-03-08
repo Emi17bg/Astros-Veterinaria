@@ -1,11 +1,12 @@
 import Layout from "../hola/Layout/Layout";
+import ContactForm from "../hola/ContactForm/ContactForm"
 
-const Contact = () => {
+const ContactSection = () => {
   return (
-    <>
-      <Layout />
-    </>
+    <Layout>
+      <ContactForm />
+    </Layout>
   );
 };
 
-export default Contact;
+export default ContactSection;
