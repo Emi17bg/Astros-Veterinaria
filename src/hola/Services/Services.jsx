@@ -4,7 +4,7 @@ import 'boxicons';
 
 const ServicesSection = () => {
   return (
-    <section className="service_section layout_padding">
+    <section id="services" className="service_section layout_padding">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-10 offset-md-1">

@@ -4,7 +4,7 @@ import image from '../../assets/AboutUs/AboutUs.png';
 
 const AboutSection = () => {
   return (
-    <div className="about_section">
+    <div id="about" className="about_section">
       <div className="container">
         <div className="row">
           <div className="col-md-5 img-box">

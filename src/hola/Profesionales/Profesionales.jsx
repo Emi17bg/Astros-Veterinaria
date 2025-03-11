@@ -37,7 +37,7 @@ const veterinarios = [
 
 const ProfesionalesSection = () => {
   return (
-    <section className="profesionales_section layout_padding">
+    <section id="professionals" className="profesionales_section layout_padding">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-10 offset-md-1">

@@ -40,6 +40,7 @@ html, body {
 .brand-icon {
   font-size: 30px;
   margin-right: 8px;
+  margin-left: 8px;
   color: #191919;
 }
 
@@ -54,6 +55,24 @@ html, body {
 
 .navbar-toggler i {
   color: #000;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 5px;
+  margin-left: auto;
+  align-items: center;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: white;
 }
 
 .custom_nav-container .navbar-nav .nav-link {
@@ -102,6 +121,7 @@ a:focus {
 
   .navbar-nav {
     text-align: center;
+    align-items: center;
     flex-direction: column;
   }
 
@@ -122,49 +142,92 @@ a:focus {
 
 .footer_section {
   background-color: #81ad45;
+  color: black; 
   padding: 60px 0;
   margin-top: 40px;
+  text-align: center;
 }
 
 .footer_section h5 {
   margin-bottom: 20px;
+  font-weight: bold;
+  color: black; 
 }
 
 .footer_section p {
   font-size: 0.9rem;
   line-height: 1.6;
+  color: black; 
+}
+
+.footer_col {
+  margin-bottom: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer_links,
 .footer_contact {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .footer_links li,
 .footer_contact li {
-  color: black;
   margin-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+  color: black; 
 }
 
-.footer_links li a,
-.footer_contact li a {
+.footer_links li a {
+  color: black; 
   text-decoration: none;
 }
 
+.footer_links button {
+  text-align: center;
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
 .footer_links li a:hover,
-.footer_contact li a:hover {
+.footer_links button:hover {
   text-decoration: underline;
-  color: #000;
+  color: #333;
+}
+
+.footer_contact li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .footer_bottom {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: -55px;
   padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 0.8rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 0.85rem;
+  color: black; 
 }
+
+.social_icons {
+  margin-top: 15px;
+}
+
+
+
+
 
 

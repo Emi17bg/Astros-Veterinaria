@@ -1,84 +1,126 @@
-import React, { useState } from 'react';
-import './ContactForm.css';
+import { useState } from "react";
+import { Form, Button, Modal, Container, Card } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const ContactForm = () => {
-  // Estados para los campos del formulario
-  const [nombre, setNombre] = useState('');
-  const [correo, setCorreo] = useState('');
-  const [mensaje, setMensaje] = useState('');
-  
-  // Estado para controlar la visibilidad del modal
-  const [showModal, setShowModal] = useState(false);
+function FormWithModal() {
+  const [show, setShow] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  // Al enviar el formulario se previene el comportamiento por defecto y se muestra el modal
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setShowModal(true);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Función para cerrar el modal
-  const closeModal = () => {
-    setShowModal(false);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleShow();
   };
 
   return (
-    <div className="contact-form-container">
-      <h1>Contáctanos</h1>
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <label htmlFor="nombre">Nombre</label>
-        <input
-          type="text"
-          id="nombre"
-          placeholder="Ingresa tu nombre"
-          value={nombre}
-          onChange={(e) => setNombre(e.target.value)}
-          required
-        />
+    <Container className="d-flex justify-content-center align-items-center vh-100">
+      <Card className="p-4 shadow-lg border-0" style={{ width: "30rem", borderRadius: "10px" }}>
+        <h2 className="text-center mb-4">Contacto</h2>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3" controlId="formName">
+            <Form.Label>Nombre</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Ingrese su nombre"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="border-2"
+            />
+          </Form.Group>
 
-        <label htmlFor="correo">Correo Electrónico</label>
-        <input
-          type="email"
-          id="correo"
-          placeholder="Ingresa tu correo"
-          value={correo}
-          onChange={(e) => setCorreo(e.target.value)}
-          required
-        />
+          <Form.Group className="mb-3" controlId="formEmail">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="name@example.com"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="border-2"
+            />
+          </Form.Group>
 
-        <label htmlFor="mensaje">Mensaje</label>
-        <textarea
-          id="mensaje"
-          placeholder="Escribe tu mensaje"
-          value={mensaje}
-          onChange={(e) => setMensaje(e.target.value)}
-          required
-        ></textarea>
+          <Form.Group className="mb-3" controlId="formMessage">
+            <Form.Label>Mensaje</Form.Label>
+            <Form.Control
+              as="textarea"
+              rows={3}
+              placeholder="Escriba su mensaje"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              className="border-2"
+            />
+          </Form.Group>
 
-        <button type="submit">Enviar</button>
-      </form>
-
-      {showModal && (
-        <div className="modal-overlay">
-          <div className="modal">
-            <h2>Datos Ingresados</h2>
-            <p>
-              <strong>Nombre:</strong> {nombre}
-            </p>
-            <p>
-              <strong>Correo Electrónico:</strong> {correo}
-            </p>
-            <p>
-              <strong>Mensaje:</strong> {mensaje}
-            </p>
-            <button onClick={closeModal}>Cerrar</button>
+          <div className="d-flex justify-content-center">
+            <Button
+              type="submit"
+              style={{
+                backgroundColor: "#81ad45",
+                borderColor: "#81ad45",
+                padding: "10px 30px",
+                fontSize: "16px",
+                borderRadius: "5px"
+              }}
+              className="text-white"
+            >
+              Enviar
+            </Button>
           </div>
-        </div>
-      )}
-    </div>
-  );
-};
+        </Form>
+      </Card>
 
-export default ContactForm;
+      {/* Modal con datos ingresados */}
+      <Modal show={show} onHide={handleClose} centered>
+        <Modal.Header
+          closeButton
+          style={{ backgroundColor: "#81ad45", color: "white", borderRadius: "5px 5px 0 0" }}
+        >
+          <Modal.Title>Datos ingresados</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p><strong>Nombre:</strong> {formData.name}</p>
+          <p><strong>Email:</strong> {formData.email}</p>
+          <p><strong>Mensaje:</strong> {formData.message}</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button
+            variant="secondary"
+            onClick={handleClose}
+            style={{
+              backgroundColor: "#81ad45",
+              borderColor: "#81ad45",
+              borderRadius: "5px"
+            }}
+            className="text-white"
+          >
+            Cerrar
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </Container>
+  );
+}
+
+export default FormWithModal;
+
+
+
 
 
 

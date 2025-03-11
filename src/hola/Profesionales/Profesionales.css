@@ -8,6 +8,7 @@
   color: #333;
   margin-bottom: 30px;
   font-weight: bold;
+  margin-left: 10px;
 }
 
 .profesionales_section .profesionales_row {
@@ -16,7 +17,7 @@
   align-items: flex-start;
   flex-wrap: wrap; 
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 
@@ -73,17 +74,23 @@
   line-height: 1.4;
 }
 
+
 @media (max-width: 768px) {
   .profesionales_section .profesionales_card {
-    flex: 0 1 45%;
+    flex: 0 1 48%; 
   }
 }
 
 @media (max-width: 480px) {
   .profesionales_section .profesionales_card {
-    flex: 0 1 100%;
+    flex: 0 1 100%; 
   }
 }
+
+
+
+
+
 
 
 
